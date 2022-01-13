@@ -30,7 +30,6 @@ Imagine this situation. You're seeing a patient with seropositive rheumatoid art
 
 Currently, we don't yet have an evidence-based answer for how you should answer the above question, but that's partly because we don't have predictive tools that can tell us this probability with any great degree of accuracy.
 
-
 [Norgeot and colleagues](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2728001) have attempted to create such a tool for rheumatoid arthritis. They have, in their own words, asked the question of whether "artificial intelligence models \[can\] prognosticate future patient outcomes for a complex disease, such as rheumatoid arthritis?" But they actually asked one further and very **crucial** question: *does such a model generalise to other cohorts?*
 
 I'm going to cover four topics in this post:
@@ -1728,7 +1727,7 @@ model_setup <- model %>%
 ```r
 fitted <- fit(model_setup,
               train_dl, 
-              epochs = 15, 
+              epochs = 25, 
               valid_data = valid_dl, 
               verbose = FALSE)
 ```
@@ -1793,8 +1792,6 @@ Oh no, the AUC is only 0.71 - that's not great! How can we do better? Well, we c
 
 Transfer learning is the process of taking a model trained on one task and reapplying it to perform a new task, often with some re-training on the new task, although sometimes without. Generally, we perform transfer learning with models originally trained on large datasets and transfer those models to tasks using much smaller datasets. In doing so, we don't want to lose all of the hard-won information learnt from the large dataset, so re-training is generally performed on a subset of the model layers (the latter layers). We will perform transfer learning by freezing all layers, except the dense layers.
 
-![](/post/2019-05-26-forecasting-the-future-in-rheumatoid-arthritis_files/model.png)
-
 First, we will do a data split like earlier:
 
 
@@ -1842,15 +1839,15 @@ model_new <- model %>%
   set_opt_hparams(lr = 0.01)
 ```
 
-Now let's train the model for the final deep layers:
+Now let's train the final deep layers:
 
 
 ```r
 fitted_new <- fit(model_new,
                   train_dl, 
-                  epochs = 15, 
+                  epochs = 25, 
                   valid_data = valid_dl, 
-                  verbose = TRUE)
+                  verbose = FALSE)
 ```
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-15-1.png" width="672" />

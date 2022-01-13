@@ -311,7 +311,7 @@ model_setup <- model %>%
 ```{r message=FALSE, warning=FALSE, results='hide'}
 fitted <- fit(model_setup,
               train_dl, 
-              epochs = 15, 
+              epochs = 25, 
               valid_data = valid_dl, 
               verbose = FALSE)
 ```
@@ -379,8 +379,6 @@ Oh no, the AUC is only `r round(metrics$auc, digits = 2)` - that's not great! Ho
 
 Transfer learning is the process of taking a model trained on one task and reapplying it to perform a new task, often with some re-training on the new task, although sometimes without. Generally, we perform transfer learning with models originally trained on large datasets and transfer those models to tasks using much smaller datasets. In doing so, we don't want to lose all of the hard-won information learnt from the large dataset, so re-training is generally performed on a subset of the model layers (the latter layers). We will perform transfer learning by freezing all layers, except the dense layers.
 
-![](/post/2019-05-26-forecasting-the-future-in-rheumatoid-arthritis_files/model.png)
-
 First, we will do a data split like earlier:
 
 ```{r}
@@ -426,14 +424,14 @@ model_new <- model %>%
   set_opt_hparams(lr = 0.01)
 ```
 
-Now let's train the model for the final deep layers:
+Now let's train the final deep layers:
 
 ```{r message=FALSE, warning=FALSE}
 fitted_new <- fit(model_new,
                   train_dl, 
-                  epochs = 15, 
+                  epochs = 25, 
                   valid_data = valid_dl, 
-                  verbose = TRUE)
+                  verbose = FALSE)
 ```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}

@@ -1,6 +1,5 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: I am interested in developing and applyign machine learning methods to solve real-world clinical problems.
 education:
   courses:
   - course: PhD in Machine Learning
@@ -40,11 +39,9 @@ social:
   link: https://github.com/cmcmaster1
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/
+  link: https://www.linkedin.com/in/mcmastc1/
 superuser: true
 title: Dr Christopher McMaster
 ---
 
 Christopher McMaster is a clinician data scientist, specialising in rheumatology and clinical pharmacology. He is currently a PhD student at the University of Melbourne, studying applied machine learning in pharmacovigilance. He is also the Data Science Lead in the Medicines Optimisation Service at Austin Health.
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
