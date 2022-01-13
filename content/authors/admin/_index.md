@@ -3,25 +3,25 @@ bio: My research interests include distributed robotics, mobile computing and pr
   matter.
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: PhD in Machine Learning
+    institution: University of Melbourne
+    year: 2021 -
+  - course: MBBS
+    institution: University of Melbourne
+    year: 2009 - 2013
+  - course: Bachelor of Science / Bachelor of Arts
+    institution: University of Tasmania
+    year: 2005 - 2008
 email: ""
 highlight_name: true
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Machine Learning
+- Pharmacovigilance
+- Rheumatology
 organizations:
-- name: Stanford University
-  url: https://www.stanford.edu/
-role: Professor of Artificial Intelligence
+- name: Austin Health
+  url: https://www.austin.org.au
+role: Data Science Lead
 social:
 - icon: envelope
   icon_pack: fas
@@ -31,22 +31,20 @@ social:
   icon: twitter
   icon_pack: fab
   label: Follow me on Twitter
-  link: https://twitter.com/GeorgeCushen
+  link: https://twitter.com/DrCMcMaster
 - icon: graduation-cap
   icon_pack: fas
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://scholar.google.co.uk/citations?user=saf4O9kAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/cmcmaster1
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/
 superuser: true
-title: Alice Bighetti (吳恩達)
+title: Dr Christopher McMaster
 ---
 
-Alice Bighetti is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Christopher McMaster is a clinician data scientist, specialising in rheumatology and clinical pharmacology. He is currently a PhD student at the University of Melbourne, studying applied machine learning in pharmacovigilance. He is also the Data Science Lead in the Medicines Optimisation Service at Austin Health.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
